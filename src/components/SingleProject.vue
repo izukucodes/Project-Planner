@@ -1,11 +1,11 @@
 <template>
-  <div class="project">
+  <div class="project" :class="{ complete: project.completed }">
     <div class="actions" @dblclick="toggleDetail">
       <h3>{{ project.title }}</h3>
       <div class="icons">
         <span class="material-icons edit">edit</span>
         <span class="material-icons delete" @click="deleteProject">delete</span>
-        <span class="material-icons done">done</span>
+        <span class="material-icons done" @click="toggleComplete">done</span>
       </div>
     </div>
     <div class="details" v-if="showDetails">
@@ -34,6 +34,15 @@ export default {
         .then(() => this.$emit("deleteProject", this.project.id))
         .catch((err) => console.log(err.message));
     },
+    toggleComplete() {
+      fetch(this.uri, {
+        method: "PATCH",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ completed: !this.project.completed }),
+      })
+        .then(() => this.$emit("toggleComplete", this.project.id))
+        .catch((err) => console.log(err.message));
+    },
   },
 };
 </script>
@@ -45,21 +54,28 @@ export default {
   padding: 10px 20px;
   border-radius: 4px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #e90074;
+  border-left: 5px solid #e90074;
+  user-select: none;
+}
+.complete {
+  border-left: 5px solid #66de93;
 }
 h3 {
   cursor: pointer;
+  user-select: none;
 }
 .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 .material-icons {
   font-size: 24px;
   margin-left: 10px;
   color: #bbb;
   cursor: pointer;
+  user-select: none;
 }
 /* .material-icons:hover {
   color: #777;
