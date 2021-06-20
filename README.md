@@ -4,6 +4,10 @@
 ```
 npm install
 ```
+### Starts JSON Server
+```
+npx json-server --watch data/db.json
+```
 
 ### Compiles and hot-reloads for development
 ```
