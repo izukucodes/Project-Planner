@@ -1,9 +1,9 @@
 <template>
   <form @submit.prevent="addProject">
     <label>Title</label>
-    <input type="text" />
+    <input type="text" v-model="title" />
     <label>Details</label>
-    <textarea></textarea>
+    <textarea v-model="details"></textarea>
     <button>Add Project</button>
   </form>
 </template>
@@ -18,7 +18,20 @@ export default {
   },
   methods: {
     addProject() {
-      console.log(this.title, this.details);
+      const project = {
+        title: this.title,
+        details: this.details,
+        completed: false,
+      };
+      fetch("http://localhost:3000/projects", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(project),
+      })
+        .then(() => {
+          this.$router.push("/");
+        })
+        .catch((err) => console.log(err.message));
     },
   },
 };
