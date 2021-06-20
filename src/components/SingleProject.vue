@@ -3,7 +3,10 @@
     <div class="actions" @dblclick="toggleDetail">
       <h3>{{ project.title }}</h3>
       <div class="icons">
-        <span class="material-icons edit">edit</span>
+        <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
+          <span class="material-icons edit">edit</span>
+        </router-link>
+
         <span class="material-icons delete" @click="deleteProject">delete</span>
         <span class="material-icons done" @click="toggleComplete">done</span>
       </div>

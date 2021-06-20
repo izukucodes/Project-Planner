@@ -39,7 +39,6 @@ export default {
       this.projects = this.projects.map((project) => {
         if (project.id === id) {
           project.completed = !project.completed;
-          console.log("DONE ");
         }
         return project;
       });

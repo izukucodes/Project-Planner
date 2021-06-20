@@ -1,21 +1,21 @@
 {
   "projects": [
     {
-      "id": 1,
-      "title": "Hello World",
-      "details": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
-      "completed": false
+      "title": "Complete project planner",
+      "details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+      "completed": true,
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Hello World 2",
-      "details": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
-      "completed": false
-    },
-    {
-      "title": "asdas",
-      "details": "asdasda",
+      "title": "Flex on Twitter blah",
+      "details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
       "completed": false,
+      "id": 2
+    },
+    {
+      "title": "Drink water",
+      "details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+      "completed": true,
       "id": 3
     }
   ]
