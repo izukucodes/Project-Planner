@@ -1,5 +1,5 @@
 <template>
-  <div class="project" :class="{ complete: project.completed }">
+  <div class="project" :class="{ complete: project.completed == true }">
     <div class="actions" @dblclick="toggleDetail">
       <h3>{{ project.title }}</h3>
       <div class="icons">
@@ -8,7 +8,12 @@
         </router-link>
 
         <span class="material-icons delete" @click="deleteProject">delete</span>
-        <span class="material-icons done" @click="toggleComplete">done</span>
+        <span
+          class="material-icons done"
+          @click="toggleComplete"
+          :class="{ completedproject: project.completed == true }"
+          >done</span
+        >
       </div>
     </div>
     <div class="details" v-if="showDetails">
@@ -94,5 +99,8 @@ h3 {
 }
 .project:hover {
   background-color: #dbe6fd;
+}
+.completedproject {
+  color: #66de93;
 }
 </style>

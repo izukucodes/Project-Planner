@@ -2,21 +2,39 @@
   "projects": [
     {
       "title": "Complete project planner",
-      "details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+      "details": "~ Navigation\n~ Filtered Navigation\n~ CRUD Operations\n",
       "completed": true,
       "id": 1
     },
     {
-      "title": "Flex on Twitter blah",
+      "title": "Make someone jealous on Twitter 😂😂😂",
       "details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
-      "title": "Drink water",
+      "title": "Drink plenty of water",
       "details": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
       "completed": true,
       "id": 3
+    },
+    {
+      "title": "Eat your vegetables 🥦🥦🥦",
+      "details": "",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Code for 3 hours 💻💻💻",
+      "details": "",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Skipping for 10 mins 🏃‍♂️🏃‍♂️🏃‍♂️",
+      "details": "",
+      "completed": false,
+      "id": 6
     }
   ]
 }

@@ -1,4 +1,5 @@
 <template>
+  <h1 class="title">Project Planner</h1>
   <Navbar />
   <router-view />
 </template>
@@ -19,5 +20,13 @@ body {
   max-width: 600px;
   margin: 0 auto;
   color: #555;
+}
+.title {
+  text-align: center;
+  margin: 50px auto;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #777;
 }
 </style>
